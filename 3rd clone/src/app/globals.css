@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Modern Emerald Luxury brand colors */
+  --color-emerald-luxury: #0f5132;
+  --color-action-green: #198754;
+  --color-action-hover: #157347;
+  --color-charcoal-midnight: #121619;
+  --color-charcoal-soft: #1c2126;
+  --color-charcoal-light: #2c3237;
+  --color-off-white: #f8f9fa;
+  --color-border-slate: #e2e8f0;
+
+  /* Typography fallback with Google Font */
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Ensure global font family and background color rules */
+html, body {
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background-color: #f8f9fa;
+  color: #121619;
+  scroll-behavior: smooth;
+}
+
+/* Specific font weight mapping to eliminate AI slop and generic feel */
+h1, h2, h3 {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+h4, h5, h6, th, .font-semibold-custom {
+  font-weight: 500 !important;
+}
+
+p, span, div, input, select, textarea, td {
+  font-weight: 400;
+}
+
+/* Remove all text shadows globally */
+h1, h2, h3, h4, h5, h6, p, span, button {
+  text-shadow: none !important;
+}
+
+/* Band styles */
+.band-navy {
+  background: linear-gradient(180deg, #121619 0%, #1c2126 100%);
+}
+
+.band-navy-deep {
+  background: #121619;
+}
+
+/* Modern low-elevation shadows as specified */
+.shadow-modern-soft {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-modern-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.shadow-modern-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Refined fields */
+.field {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 0.85rem 1rem;
+  font-size: 0.875rem;
+  color: #121619;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.field::placeholder {
+  color: #94a3b8;
+}
+.field:focus {
+  border-color: #0f5132;
+  box-shadow: 0 0 0 3px rgba(15, 81, 50, 0.12);
+}
+.field-error {
+  border-color: #ef4444;
+}
+.field-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 500 !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #198754;
+}
+
+select.field {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
