@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.brand} · Trusted Vehicle History Reports For Every Ride`,
+    default: `Vindecode — Trusted Vehicle History Reports`,
     template: `%s · ${site.brand}`,
   },
   description:
